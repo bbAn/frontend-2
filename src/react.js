@@ -17,6 +17,11 @@ export function createDOM(node) {
   return element;
 }
 
+// createElement 함수 생성
+export function createElement(tag, props, ...children) {
+  return { tag, props, children };
+}
+
 export function render(vdom, container) {
   container.appendChild(createDOM(vdom));
 }
